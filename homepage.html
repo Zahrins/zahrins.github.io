@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./src/style.css" rel="stylesheet">
+    <title>Home page</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+    <style>
+        .navbar-fixed {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+    </style>
+      
+</head>
+<body class="bg-first dark:bg-slate-900">
+
+  <div class="hidden lg:flex w-54 h-screen bg-second dark:bg-pink-900 dark:text-white text-slate-700 flex-col px-4 py-6 space-y-4 fixed">
+    <h2 class="text-2xl font-bold mb-6">FleurSkin</h2>
+
+    <a href="#" class="flex items-center px-4 py-2 rounded-md hover:bg-first dark:hover:bg-pink-800">
+      <span class="material-symbols-outlined text-2xl mr-3">home</span>
+      Home
+    </a>
+
+    <a href="#" class="flex items-center px-4 py-2 rounded-md hover:bg-first dark:hover:bg-pink-800">
+      <span class="material-symbols-outlined text-2xl mr-3">settings</span>
+      Settings
+    </a>
+
+    <a href="#" class="flex items-center px-4 py-2 rounded-md hover:bg-first dark:hover:bg-pink-800">
+      <span class="material-symbols-outlined text-2xl mr-3">notifications</span>
+      Notification
+    </a>
+
+    <a href="#" class="flex items-center px-4 py-2 rounded-md hover:bg-first dark:hover:bg-pink-800">
+      <span class="material-symbols-outlined text-2xl mr-3">payments</span>
+      Donation
+    </a>
+    <a>
+      
+    </a>
+    <div class="ml-5">
+      <input type="checkbox" id="toggle" class="hidden" />
+      <label for="toggle">
+        <div class="w-9 h-5 bg-slate-500 rounded-full flex items-center p-1 cursor-pointer">
+          <div class="w-4 h-4 bg-white rounded-full toggle-circle"></div>
+        </div>
+      </label>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="lg:ml-64 flex-1 min-h-screen p-4">
+    <div class="mt-20 min-h-screen">
+      <h3 class="font-title font-semibold text-xl text-slate-700 mb-6 dark:text-white">Your Schedule</h3>
+      <div class="bg-white border border-slate-200 dark:border-slate-800 dark:bg-slate-800 rounded-lg shadow-lg overflow-hidden w-full h-90 p-5">
+        <a class="font-semibold dark:text-white">Night</a>
+        <ol>
+          <li class="mt-6 dark:text-white">1. Night Routine
+            <ul class="ml-4 mt-2">
+              <li>Micellar Water</li>
+              <li>Facial Wash</li>
+              <li>Moisturizer</li>
+              <li>Acne Spot Treatment</li>
+              <li class="mt-10 text-rose-800 dark:text-rose-400 mb-5"><span class="material-symbols-outlined mt-2 mr-2">
+                notifications_active
+                </span><span class="font-semibold">Reminder:</span> Today Is Mask Day</li>
+              <li><a href="schedule.html" class="border border-slate-700 bg-second rounded-lg px-5 py-1 p-5 dark:border-rose-900 dark:bg-pink-900">click for more</a></li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+    </div>
+
+  <!--Schedule Section End-->
+
+    <!--Carousel Section Start-->
+    <div class="">
+        <div class="swiper w-full">
+          <div class="swiper-wrapper">
+      
+            <!-- Slide 1 -->
+            <div class="swiper-slide mb-10">
+              <div class="animate-pulse space-x-3 bg-white dark:bg-slate-800 rounded-lg shadow-lg overflow-hidden w-3/4 mx-auto lg:flex lg:justify-center lg:items-center lg:gap-15 p-5">
+                <img src="/img/goals-pic.png" alt="goals" class="w-full dark:hidden h-40 lg:h-60 lg:w-60 object-cover">
+                <img src="/img/tracker-dark.png" alt="goals" class="w-full hidden dark:block h-40 lg:h-60 lg:w-60 object-cover">
+                <div >
+                  <div class="p-5 lg:p-2">
+                    <h3 class="font-semibold text-lg text-slate-700 dark:text-white">Goals</h3>
+                  </div>
+                  <button class="border border-slate-400 rounded-lg py-1 m-3 w-38 text-sm bg-gradient-to-br from-second via-rose-300 to-second hover:text-bold dark:from-pink-900 dark:via-pink-700 dark:to-pink-900"><a href="goals.html">Set Your Goals!</a></button>
+                </div>
+              </div>
+            </div>
+      
+            <!-- Slide 2 -->
+            <div class="swiper-slide mb-10">
+              <div class="animate-pulse space-x-3 bg-white rounded-lg dark:bg-slate-800 shadow-lg overflow-hidden w-3/4 mx-auto lg:flex lg:justify-center lg:items-center lg:gap-15">
+                <img src="/img/tracker-pic.png" alt="goals" class="w-full dark:hidden h-40 lg:h-60 lg:w-60 object-cover">
+                <img src="/img/goals-dark.png" alt="goals" class="w-full hidden dark:block h-40 lg:h-60 lg:w-60 object-cover">
+                <div >
+                  <div class="p-5 lg:p-2">
+                    <h3 class="font-semibold text-lg text-slate-700 dark:text-white">Track</h3>
+                  </div>
+                  <button class="border border-slate-400 rounded-lg py-1 m-3 w-38 text-sm bg-gradient-to-br from-second via-rose-300 to-second hover:text-bold dark:from-pink-900 dark:via-pink-700 dark:to-pink-900"><a href="track.html">Track my skin</a></button>
+                </div>
+              </div>
+            </div>
+      
+            <!-- Slide 3 -->
+            <div class="swiper-slide mb-10">
+                <div class="animate-pulse space-x-3 bg-white rounded-lg dark:bg-slate-800 shadow-lg overflow-hidden mb-4 lg:mb-4 w-3/4 mx-auto p-3">
+                  <div class="flex flex-nowrap">
+                    <div class="mr-3">
+                      <span class="material-symbols-outlined">
+                        account_circle
+                        </span>
+                    </div>
+                    <div>
+                      <li class="text-rose-700 mb-1 dark:text-rose-300">@username</li>
+                      <li class="dark:text-white">Sunscreen facetology bikin aku komedoan, rekom ss dong</li>
+                    </div>
+                  </div>
+                  <div class="flex flex-nowrap">
+                    <div class="mr-3">
+                      <span class="material-symbols-outlined">
+                        account_circle
+                        </span>
+                    </div>
+                    <div>
+                      <li class="text-rose-700 mb-1 dark:text-rose-300">@username</li>
+                      <li class="dark:text-white">Pake sunscreen unitary aja, itu bagus</li>
+                    </div>
+                  </div>
+                  <div class="p-4">
+                    <h3 class="font-semibold text-lg text-slate-700 dark:text-white">Community</h3>
+                  </div>
+                  <button class="border border-slate-400 rounded-lg py-1 m-3 w-33 text-sm bg-gradient-to-br from-second via-rose-300 to-second dark:from-pink-900 dark:via-pink-700 dark:to-pink-900 hover:text-bold"><a href="community.html">Join communinty!</a></button>
+                </div>
+            </div>
+          </div>
+          <!-- Navigation -->
+          <div class="swiper-button-next w-5" style="--swiper-navigation-color: #3a3838; --swiper-navigation-font-size: 10px;"></div>
+          <div class="swiper-button-prev" style="--swiper-navigation-color: #3a3838; --swiper-navigation-font-size: 10px;"></div>
+      
+          <!-- Pagination -->
+          <div class="swiper-pagination mt-10" style="--swiper-pagination-color: #3a3838;"></div>
+        </div>
+      </div>
+          <!--Recommendation Section Start-->
+
+    <div class="mt-20 mb-20">
+      <h3 class="font-title font-semibold text-xl text-slate-700 dark:text-white mb-6">Reccomendations for you</h3>
+      <div class="bg-white dark:border-slate-800 dark:bg-slate-800 border-slate-200 rounded-lg shadow-lg overflow-hidden w-full h-full mx-auto p-5">
+        <a class="leading-relaxed "><span class="font-semibold dark:text-white">According to your goal:</span> <span class="dark:text-white">Acne-free skin, we recommend you to add one product that contains</span> <span class="text-green-500">Salicylic Acid<span>.</a>
+        <p class="leading-relaxed mt-3"><span class="text-green-500">Salicylic acid</span><span class="dark:text-white">, a beta-hydroxy acid (BHA), acts as a gentle chemical exfoliant, promoting skin renewal by unclogging pores, reducing <merah>inflammation<merah>, and improving skin texture, making it beneficial for acne-prone and other skin conditions.</span></p>
+        <a class="leading-relaxed mt-3"><span class="text-red-500 font-semibold">Caution:</span> <span class="dark:text-white">please do some more research if you already use products that contains active ingredients to avoid negative reactions.</span></a>
+        </div>
+  </div>
+
+  <!--Recommendation Section End-->
+  </div>
+
+  <!-- Navbar Bottom (Hanya tampil di Mobile) -->
+  <div class="fixed bottom-0 left-0 right-0 bg-gradient-to-b from-rose-100 via-first to-rose-100 dark:from-pink-900 dark:via-pink-900 dark:to-pink-900 dark:text-white border border-slate-300 rounded-t-lg py-2 px-5 lg:hidden">
+    <nav>
+      <ul class="flex justify-around items-center w-full">
+        <!-- Toggle Dark/Light Mode -->
+        <li>
+          <div>
+            <input type="checkbox" id="toggle" class="hidden" />
+            <label for="toggle">
+              <div class="w-9 h-5 bg-slate-500 rounded-full flex items-center p-1 cursor-pointer">
+                <div class="w-4 h-4 bg-white rounded-full toggle-circle"></div>
+              </div>
+            </label>
+          </div>
+        </li>
+
+        <li>
+          <a href="homepage.html" class="text-slate-600 hover:text-slate-800 flex flex-col items-center text-xs">
+            <span class="material-symbols-outlined text-2xl">home</span>
+            Home
+          </a>
+        </li>
+
+        <li>
+          <a href="setting.html" class="text-slate-600 hover:text-slate-800 flex flex-col items-center text-xs">
+            <span class="material-symbols-outlined text-2xl">settings</span>
+            Settings
+          </a>
+        </li>
+
+        <li>
+          <a href="notification.html" class="text-slate-600 hover:text-slate-800 flex flex-col items-center text-xs">
+            <span class="material-symbols-outlined text-2xl">notifications</span>
+            Notif
+          </a>
+        </li>
+
+        <li>
+          <a href="donate.html" class="text-slate-600 hover:text-slate-800 flex flex-col items-center text-xs">
+            <span class="material-symbols-outlined text-2xl">payments</span>
+            Donate
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+    <!--Schedule Section Start-->
+      
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+      <!-- Inisialisasi Swiper -->
+      <script>
+        const swiper = new Swiper('.swiper', {
+          loop: true,
+          pagination: {
+            el: '.swiper-pagination',
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+        });
+      </script>
+    
+    <!--Carousel Section End-->
+
+
+    <div class="w-10 h-10 bg-second rounded-full flex fixed bottom-5 right-5 -translate-x-1/2 cursor-pointer"><a href="#" class="text-xl m-auto">↑</a></div>
+    <script type="module" src="/src/main.js"></script>
+    <script>
+      window.addEventListener("scroll", function() {
+          const header = document.querySelector(".navbar-fixed");
+          if (window.scrollY > 50) {
+              header.classList.add("bg-slate-100", "shadow-md", "dark:bg-slate-900");
+              header.classList.remove("bg-transparent");
+          } else {
+              header.classList.remove("bg-slate-100", "shadow-md", "dark:bg-slate-900");
+              header.classList.add("bg-transparent");
+          }
+      });
+
+    const checkbox = document.querySelector('#toggle');
+    const html = document.querySelector('html');
+
+    checkbox.addEventListener('click', function () {
+      checkbox.checked ? html.classList.add('dark') : html.classList.remove('dark');
+    });
+  </script>
+
+</body>
+</html>

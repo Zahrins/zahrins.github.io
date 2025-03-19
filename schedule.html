@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="./src/style.css" rel="stylesheet">
+  <title>Schedule Page</title>
+</head>
+<body class="m-6 bg-first">
+
+  <div class="flex flex-col justify-center items-center">
+    <h4 class="font-title text-6xl font-bold text-slate-600">Schedule</h4>
+    <a class="mb-10 mt-2">Schedule your glow-up time!</a>
+  </div>
+
+  <!--Dropdown Section Start-->
+  <div class="relative inline-block text-left">
+    <!-- Trigger button -->
+    <button onclick="toggleDropdown()" type="button" class="inline-flex justify-between w-56 rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-slate-50">
+      Pilih Waktu
+      <svg class="-mr-1 ml-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+      </svg>
+    </button>
+  
+    <!-- Dropdown menu -->
+    <div id="dropdownMenu" class="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 hidden z-10">
+      <div class="py-1">
+        <a href="#daily" class="block px-4 py-2 text-sm text-gray-700 hover:bg-second hover:text-gray-900">Daily</a>
+        <a href="#weekly" class="block px-4 py-2 text-sm text-gray-700 hover:bg-second hover:text-gray-900">Weekly</a>
+        <a href="#monthly" class="block px-4 py-2 text-sm text-gray-700 hover:bg-second hover:text-gray-900">Monthly</a>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    function toggleDropdown() {
+      const menu = document.getElementById('dropdownMenu');
+      menu.classList.toggle('hidden');
+    }
+  </script>
+  
+
+  <!-- Day Schedule -->
+   <div id="daily" class="mt-10">
+    <div class="mb-4">
+      <div class="flex justify-between items-center mb-2">
+        <h2 class="text-md font-semibold">Day</h2>
+      </div>
+      
+      <!-- Input + Add button -->
+      <div class="flex gap-2 mb-4">
+        <input type="text" id="dayInput" placeholder="enter your schedule..." 
+          class="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none"/>
+        <button onclick="addTask('dayTasks', 'dayInput')" 
+          class="bg-second text-slate-500 px-4 py-2 rounded-md hover:bg-rose-200 hover:text-slate-600 hover:font-bold">  +  </button>
+      </div>
+      
+      <!-- Tasks List -->
+      <ul id="dayTasks" class="space-y-2">
+        <!-- Tasks for Day will appear here -->
+      </ul>
+    </div>
+  
+    <!-- Night Schedule -->
+    <div class="mb-4">
+      <div class="flex justify-between items-center mb-2">
+        <h2 class="text-md font-semibold">Night</h2>
+      </div>
+      
+      <!-- Input + Add button -->
+      <div class="flex gap-2 mb-4">
+        <input type="text" id="nightInput" placeholder="enter your schedule..." 
+          class="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none"/>
+        <button onclick="addTask('nightTasks', 'nightInput')" 
+          class="bg-second text-slate-500 px-4 py-2 rounded-md hover:bg-rose-200 hover:text-slate-600 hover:font-bold">  +  </button>
+      </div>
+      
+      <!-- Tasks List -->
+      <ul id="nightTasks" class="space-y-2">
+        <!-- Tasks for Night will appear here -->
+      </ul>
+  
+    </div>
+   </div>
+
+   <div id="monthly" class="hidden">
+    <div class="mb-4">
+      <div class="flex justify-between items-center mb-2">
+        <h2 class="text-md font-semibold">Sunday</h2>
+      </div>
+      
+      <!-- Input + Add button -->
+      <div class="flex gap-2 mb-4">
+        <input type="text" id="dayInput" placeholder="enter your schedule..." 
+          class="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none"/>
+        <button onclick="addTask('dayTasks', 'dayInput')" 
+          class="bg-second text-slate-500 px-4 py-2 rounded-md hover:bg-rose-200 hover:text-slate-600 hover:font-bold">  +  </button>
+      </div>
+      
+      <!-- Tasks List -->
+      <ul id="dayTasks" class="space-y-2">
+        <!-- Tasks for Day will appear here -->
+      </ul>
+    </div>
+  
+    <!-- Night Schedule -->
+    <div class="mb-4">
+      <div class="flex justify-between items-center mb-2">
+        <h2 class="text-md font-semibold">Monday</h2>
+      </div>
+      
+      <!-- Input + Add button -->
+      <div class="flex gap-2 mb-4">
+        <input type="text" id="nightInput" placeholder="enter your schedule..." 
+          class="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none"/>
+        <button onclick="addTask('nightTasks', 'nightInput')" 
+          class="bg-second text-slate-500 px-4 py-2 rounded-md hover:bg-rose-200 hover:text-slate-600 hover:font-bold">  +  </button>
+      </div>
+      
+      <!-- Tasks List -->
+      <ul id="nightTasks" class="space-y-2">
+        <!-- Tasks for Night will appear here -->
+      </ul>
+  
+    </div>
+   </div>
+
+   <div id="weekly" class="hidden">
+    <div class="mb-4">
+      <div class="flex justify-between items-center mb-2">
+        <h2 class="text-md font-semibold">Sunday</h2>
+      </div>
+      
+      <!-- Input + Add button -->
+      <div class="flex gap-2 mb-4">
+        <input type="text" id="dayInput" placeholder="enter your schedule..." 
+          class="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none"/>
+        <button onclick="addTask('dayTasks', 'dayInput')" 
+          class="bg-second text-slate-500 px-4 py-2 rounded-md hover:bg-rose-200 hover:text-slate-600 hover:font-bold">  +  </button>
+      </div>
+      
+      <!-- Tasks List -->
+      <ul id="dayTasks" class="space-y-2">
+        <!-- Tasks for Day will appear here -->
+      </ul>
+    </div>
+  
+    <!-- Night Schedule -->
+    <div class="mb-4">
+      <div class="flex justify-between items-center mb-2">
+        <h2 class="text-md font-semibold">Monday</h2>
+      </div>
+      
+      <!-- Input + Add button -->
+      <div class="flex gap-2 mb-4">
+        <input type="text" id="nightInput" placeholder="enter your schedule..." 
+          class="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none"/>
+        <button onclick="addTask('nightTasks', 'nightInput')" 
+          class="bg-second text-slate-500 px-4 py-2 rounded-md hover:bg-rose-200 hover:text-slate-600 hover:font-bold">  +  </button>
+      </div>
+      
+      <!-- Tasks List -->
+      <ul id="nightTasks" class="space-y-2">
+        <!-- Tasks for Night will appear here -->
+      </ul>
+  
+    </div>
+   </div>
+  
+
+  <script>
+    function addTask(listId, inputId) {
+      const input = document.getElementById(inputId);
+      const taskName = input.value.trim();
+      
+      if (taskName === "") {
+        alert("Tulis dulu jadwalnya ya!");
+        return;
+      }
+  
+      const ul = document.getElementById(listId);
+      const li = document.createElement('li');
+      li.className = 'flex flex-col bg-gray-50 px-3 py-2 rounded-md shadow-sm space-y-2';
+  
+      // Struktur di dalam li
+      li.innerHTML = `
+        <div class="flex justify-between items-center">
+          <span>${taskName}</span>
+          <div class="flex gap-2 ml-auto">
+            <button onclick="this.closest('li').remove()" class="text-red-500 hover:text-red-700 text-sm"><span class="material-symbols-outlined">delete
+</span></button>
+            <button onclick="editTask(this)" class="text-slate-500 hover:text-slate-700 text-sm">Note</button>
+          </div>
+        </div>
+        <div class="note-container hidden">
+          <textarea placeholder="Tulis catatan di sini..." class="w-full px-2 py-1 border border-slate-300 rounded-md text-sm mt-2"></textarea>
+        </div>
+      `;
+  
+      ul.appendChild(li);
+      input.value = "";
+    }
+  
+    function editTask(button) {
+      const li = button.closest('li');
+      const noteContainer = li.querySelector('.note-container');
+  
+      if (noteContainer.classList.contains('hidden')) {
+        noteContainer.classList.remove('hidden');
+        button.textContent = "Simpan";
+      } else {
+        noteContainer.classList.add('hidden');
+        button.textContent = "Note";
+        // Optional: kamu bisa simpan value textarea di sini kalau mau.
+      }
+    }
+  </script>
+  
+<div class="text-right mt-10">
+  <a href="homepage.html" class="border border-slate-800 rounded-3xl px-5 py-2 bg-second text-slate-700 hover:font-semibold">finish</a>
+</div>
+
+</body>
+</html>
